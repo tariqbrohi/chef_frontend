@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Practice Food shop web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tariqbrohi/food-shop.git"
+  },
+  "author": "Tariq Brohi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tariqbrohi/food-shop/issues"
+  },
+  "homepage": "https://github.com/tariqbrohi/food-shop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.7",
+    "multer": "^1.4.3",
+    "path": "^0.12.7"
+  }
+}
