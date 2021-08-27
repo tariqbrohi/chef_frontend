@@ -1,0 +1,22 @@
+.container {
+    width: 400px;
+    border: 1px solid #898989;
+    border-radius: 15px;
+    .wrapper {
+        margin: 5px 10px;
+        .inputWrapper {
+            textarea {
+                width: 80%;
+            }
+            img {
+                margin-top: 10px;
+                width: 300px;
+                height: 250px;
+            }
+        }
+        .submitBtn {
+            margin-top: 10px;
+            text-align: right;
+        }
+    }
+}

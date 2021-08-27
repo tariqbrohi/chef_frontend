@@ -1,0 +1,90 @@
+.container {
+    width: 400px;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 15px;
+    background: rgba(240, 240, 240, 0.9);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    hr {
+        width: 95%;
+    }
+    .header {
+        padding: 0 15px;
+        .userInfo {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            .imgDiv {
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+    .descriptionDiv {
+        padding: 0 15px;
+    }
+    .contentDiv {
+        img {
+            height: 280px;
+            width: 400px;
+        }
+    }
+    .socialDiv {
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-around;
+        div, button {
+            display: flex;
+            align-items: center;
+            height: 25px;
+            column-gap: 8px;
+        }
+        div {
+            width: 40%;
+            justify-content: center;
+            .socialBtn:hover {
+                background: rgba(240, 240, 240, 0.2);
+            }
+        }
+        button {
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            justify-content: center;
+        }
+    }
+    .counts {
+        // display: flex;
+        justify-content: space-between;
+        div {
+            width: 20%;
+        }
+    }
+    .commentSection {
+        padding: 0 15px 15px 15px;
+        span {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+            }
+            input {
+                border-radius: 15px;
+                border: 1px solid #898989;
+                width: 80%;
+                font-size: 12px;
+                padding: 5px;
+            }
+            input:focus {
+                outline: none;
+            }
+        }
+    }
+}

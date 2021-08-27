@@ -1,0 +1,88 @@
+.container {
+    background: url('../../assets/img/bg3.jpg');
+    background-size: 100% 657px;
+    display: flex;
+    height: 657px;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+        background: rgb(247, 223, 223);
+        box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 50px;
+        padding-left: 20px;
+        border-radius: 10px;
+        width: 60%;
+       .userInfo {
+           display: flex;
+           flex-direction: column;
+           row-gap: 10px;
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                row-gap: 5px;
+                .name {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                input {
+                    background: rgb(247, 223, 223);
+                    border: 1px solid rgba(0, 0, 0, 0.4);
+                    border-radius: 0 8px 0 8px;
+                    padding: 4px 12px;
+                    font-size: 12px;
+                    box-sizing: border-box;
+                    color: #898989;
+                }
+                input:focus {
+                    outline: none;
+                }
+            }
+            .signup {
+                .link {
+                    margin-left: 5px;
+                    text-decoration: none;
+                }
+            }
+            .error {
+                display: none;
+                color: red;
+            }
+            .loginBtn {
+                background: none;
+                border: 1px solid #9b2e2e;
+                text-align: center;
+                // padding: 5px;
+                border-radius: 8px;
+                box-sizing: border-box;
+                button {
+                    font-size: 18px;
+                    background: none;
+                    border: none;
+                    border-radius: 8px;
+                    width: 100%;
+                    padding: 5px;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background: #9b2e2e;
+                    font-weight: 600;   
+                    transition: 1s;
+                    color: #000; 
+                }
+            }
+       }
+        .imgDiv {
+            img {
+                border-radius: 0 10px 10px 0;
+                padding: 0;
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+}
