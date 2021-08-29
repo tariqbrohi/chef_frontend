@@ -1,10 +1,9 @@
 import React from 'react';
 import style from './post.module.scss';
 import user from '../../../assets/img/user.JPG'
-import img from '../../../assets/img/background1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faCommentDots } from '@fortawesome/free-solid-svg-icons'
-const Post = (props) => {
+const Post = ({post}) => {
     return (
         <div className={style.container}>
             <div className={style.header}>
@@ -18,10 +17,10 @@ const Post = (props) => {
                 </div>
             </div>
             <div className={style.descriptionDiv}>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, cupiditate!</p>
+                <p>{post.description}</p>
             </div>
             <div className={style.contentDiv}>
-                <img src={img} alt="img" />
+                <img src={`/postImages/${post.img}`} alt="img" />
             </div>
             <div className={`${style.socialDiv} ${style.counts}`}>
                 <div className={style.likesCount}>

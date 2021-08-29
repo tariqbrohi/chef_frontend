@@ -2,8 +2,25 @@
     width: 400px;
     border: 1px solid #898989;
     border-radius: 15px;
+    display: none;
     .wrapper {
         margin: 5px 10px;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            button {
+                border-radius: 30px ;
+                height: 30px;
+                width: 30px;
+                background: none;
+                border: 1px solid #898989;
+                cursor: pointer;
+            }
+            button:hover {
+                background: #606060;
+                color: aliceblue;
+            }
+        }
         .inputWrapper {
             textarea {
                 width: 80%;
@@ -13,10 +30,26 @@
                 width: 300px;
                 height: 250px;
             }
+
         }
         .submitBtn {
             margin-top: 10px;
             text-align: right;
+            button {
+                width: 100px;
+                height: 30px;
+                background: rgb(100, 105, 220);
+                border: none;
+                border-radius: 30px;
+                color: aliceblue;
+                font-size: 15px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            button:hover {
+                background: #606060;
+                color: rgb(100, 105, 220);
+            }
         }
     }
 }

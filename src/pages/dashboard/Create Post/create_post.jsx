@@ -1,47 +1,44 @@
 import React, { useState } from 'react';
 import style from './CreatePost.module.scss';
 import axios from '../../../config/axios';
-const CreatePost = () => {
+const CreatePost = ({disp}) => {
     const [file, setFile] = useState(null);
     const [desc, setDesc] = useState('');
-    const handleSubmit = (e) => {
-        let userID = localStorage.getItem('userID');
-        const data = {
-            userId: userID,
-            description: desc
-        }
-        axios.post('/post', data)
-        .then((res) => {
-            console.log(res);
-        }) 
-        .catch((errr) => {
-            console.log(errr);
-        })
-    }
-
     const onFormSubmit = (e) => {
         e.preventDefault();
         let formData = new FormData();
         formData.append('image', file);
-        console.log(file);
         console.log(formData)
+        console.log(file);
         const config = {
             encType: "multipart/form-data"
         }
-        axios.post('/imgTest', formData, config)
+        axios.post('/saveImage', formData, config)
         .then((res) => {
-            console.log(res.data);
+            const data = {
+                userID:  localStorage.getItem('userID'),
+                desc: desc,
+                img: res.data
+            }
+            axios.post('/post', data)
+            .then((savePostRes) => {
+                console.log(savePostRes);
+            })
+            .catch((errr) => {
+                console.log(errr);
+            })
         })
         .catch((er) => {
             console.log(er);
         })
     }
     return (
-        <div className={style.container}>
+        <div className={style.container} id="post_container">
             <div className={style.wrapper}>
                 <form onSubmit={onFormSubmit}>
                     <div className={style.header}>
                         <h3>What's New Today</h3>
+                        <button onClick={(e) => document.getElementById('post_container').style.display = 'none'}>X</button>
                     </div>
                     <div className={style.inputWrapper}>
                         <textarea onChange={(e) => setDesc(e.target.value)} rows="8" placeholder="Tell something about your recipi!" />
